@@ -1,1 +1,1 @@
-# clip-vit-large
+Model reference https://huggingface.co/openai/clip-vit-large-patch14
