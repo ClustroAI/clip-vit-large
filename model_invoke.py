@@ -5,8 +5,15 @@ import json
 from transformers import CLIPProcessor, CLIPModel
 
 # Loading the model pipeline
-model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
-processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
+model = CLIPModel.from_pretrained(
+    "openai/clip-vit-large-patch14",
+    use_safetensors=True,
+    revision="32bd64288804d66eefd0ccbe215aa642df71cc41"
+)
+processor = CLIPProcessor.from_pretrained(
+    "openai/clip-vit-large-patch14",
+    revision="32bd64288804d66eefd0ccbe215aa642df71cc41"
+)
 
 # Invoke function
 def invoke(input_text):
